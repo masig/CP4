@@ -1,0 +1,61 @@
+--Place one block above of the NewSoil turtle. 
+--Make sure there are 64 seeds in each of the first two slots
+--Make sure a  hoe is attached.
+--Run this after TheHydrator has completed its work
+--Also run this program again when all the wheat is grown to restart the growing process.
+
+for n = 1, 3 do        --Runs a two lane snake 3 times = 6 lanes of planted wheat
+   turtle.select(1) 
+   for n = 1, 10 do    --The turtle runs a straight line while tilling and planting seeds 
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   end
+   turtle.turnLeft() --This makes the turtle go into the right position so that it can properly till and plant the next aisle
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   turtle.turnLeft()
+   
+   for n = 1, 10 do  --The turtle does the 10 long aisle, planting and tilling and then does a mirror image of the first operation so it makes a proper snake
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   end
+   turtle.turnRight()
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   turtle.turnRight()
+end
+   for n = 1, 2 do   --Does the same process as the top commands, the only thing that is changed is that select slot 2 is chosen so that there are enough seeds to be planted.
+     turtle.select(2)
+     for n = 1, 10 do  
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     end
+     turtle.turnLeft()
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     turtle.turnLeft()
+     
+     for n = 1, 10 do  --Places wheat for 10 blocks
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     end
+     turtle.turnRight()--Turns so it can continue the snake
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     turtle.turnRight()
+     
+     end
+     
+     turtle.turnRight()
+     for n = 1, 10 do
+     turtle.forward()
+     end
+     turtle.turnLeft()
