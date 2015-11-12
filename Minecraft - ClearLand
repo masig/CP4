@@ -1,0 +1,36 @@
+--Run this program anywhere for it to clear land
+--EXCEPT near sand because there is a glitch with the mechanics of sand
+--Run this program first TO CLEAR ALL THE LAND FOR THE FARM
+--Requires a pickaxe 
+
+for n = 1, 3 do      --Repaeats it so that it clears a 12x12 area 3 blocks high
+for n = 1, 6 do      --Repeats the snake 12 times to clear out the 12x12
+  for n = 1, 11 do
+  turtle.dig()       --Digs 11 blocks forward
+  turtle.forward()
+  end
+  turtle.turnLeft()  --Turns it so it can continue the next snake
+  turtle.dig()
+  turtle.forward()
+  turtle.turnLeft()
+  
+  for n = 1, 11 do   --Digs 11 blocks forward
+  turtle.dig()
+  turtle.forward()
+  end
+  turtle.turnRight() --Turns it so it can again continue the snake
+  turtle.dig()
+  turtle.forward()
+  turtle.turnRight()
+  end
+  
+  turtle.turnRight() --Function makes the turtle return to start position so it can go up to clear another level.
+  for n = 1, 12 do 
+  turtle.forward()
+  end
+  turtle.turnLeft()
+  turtle.up()
+  end
+  turtle.down()
+  turtle.down()
+  turtle.down()
