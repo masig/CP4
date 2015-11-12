@@ -1,0 +1,58 @@
+--make sure that there are dirt blocks in the first slot
+--Make sure there is only a pickaxe attached
+--Place this turtle directly to the left of TheHydrator
+--Run this program right after the ploughed land is cleared
+
+for n = 1, 3 do
+   for n = 1, 10 do  --Runs a snake to place down new dirt after ploughing is complete
+   turtle.forward()
+   turtle.digDown()  --Digs the block underneath
+   turtle.placeDown()--Replaces it with dirt so it can be used as farmland.
+   end
+   turtle.turnLeft()
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   turtle.turnLeft()
+   
+   for n = 1, 10 do  --Same thing as above but mirrored so it makes a proper snake manoeuver
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   end
+   turtle.turnRight()
+   turtle.forward()
+   turtle.digDown()
+   turtle.placeDown()
+   turtle.turnRight()
+end
+   for n = 1, 2 do
+   turtle.select(2)
+     for n = 1, 10 do
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+    end
+     turtle.turnLeft()
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     turtle.turnLeft()
+     
+     for n = 1, 10 do
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     end
+     turtle.turnRight()
+     turtle.forward()
+     turtle.digDown()
+     turtle.placeDown()
+     turtle.turnRight() 
+end
+     
+        turtle.turnRight() --Returns to original spot so if owner wants to replant he can just press play.
+   for n = 1, 10 do
+   turtle.forward()
+   end
+   turtle.turnLeft()
