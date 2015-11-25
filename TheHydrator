@@ -1,0 +1,33 @@
+TheHydrator
+CODE
+--Place this turtle to the bottom right corner of the ploughed land
+--Put a water bucket in the first 4 slots
+--Run this program after the NewSoil 
+for n = 1, 11 do         --Clears the way so that future placed water can flow
+  turtle.forward()
+  turtle.digDown()
+end
+turtle.select( 4 )      --Selects a wate rbucket to place in the corner
+turtle.turnLeft()
+turtle.placeDown()
+for n = 1, 11 do
+  turtle.forward()
+  turtle.digDown()
+end      
+turtle.select( 3 )      --Selects another bucket and lets it flow so dirt can be hydrated
+turtle.turnLeft()
+turtle.placeDown()
+for n = 1, 11 do
+  turtle.forward()
+  turtle.digDown()
+end
+turtle.select( 2 )      --Places another water source in the third corner
+turtle.turnLeft()
+turtle.placeDown()
+for n = 1, 11 do
+  turtle.forward()
+  turtle.digDown()
+end
+turtle.select( 1 )      --Places last bucket and returns to original place
+turtle.turnLeft()
+turtle.placeDown()
